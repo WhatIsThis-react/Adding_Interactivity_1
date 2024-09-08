@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const StyledWrapper = styled.form`
   width: 100%;
-  height: 300px;
   background-color: skyblue;
   display: flex;
   align-items: center;
@@ -18,7 +17,6 @@ export const StyledInput = styled.input`
   border: none;
   border-radius: 15px;
   font-size: 20px;
-  margin-top: 20px;
   z-index: 10;
   &:focus {
     outline: none;
@@ -34,4 +32,20 @@ export const StyledButton = styled.button`
   color: white;
   font-size: 20px;
   margin-top: 20px;
+`;
+
+export const ConterWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
 `;
