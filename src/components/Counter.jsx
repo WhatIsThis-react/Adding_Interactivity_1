@@ -3,19 +3,30 @@ import { StyledButton, CounterWrapper, ButtonWrapper } from "./styles";
 
 function Counter() {
   const [isSent, setIsSent] = useState(false);
+  const [count, setCount] = useState(0);
+
+  function handleCount(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    setCount((count) => count+1);
+  }
+
+  function handleSend(e) {
+    e.stopPropagation();
+    setIsSent(true)
+  }
 
   if (isSent) {
     return <div> 전송되었습니다.</div>;
   } else {
-    const [count, setCount] = useState(0);
     return (
       <CounterWrapper>
         {count}
         <ButtonWrapper>
-          <StyledButton onClick={() => setCount(count + 1)}>
+          <StyledButton onClick={handleCount}>
             더하기
           </StyledButton>
-          <StyledButton onClick={() => setIsSent(true)}>Send</StyledButton>
+          <StyledButton onClick={handleSend}>Send</StyledButton>
         </ButtonWrapper>
       </CounterWrapper>
     );
