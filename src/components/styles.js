@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledWrapper = styled.form`
+export const StyledForm = styled.form`
   width: 100%;
   background-color: skyblue;
   display: flex;
@@ -34,7 +34,7 @@ export const StyledButton = styled.button`
   margin-top: 20px;
 `;
 
-export const ConterWrapper = styled.div`
+export const CounterWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;

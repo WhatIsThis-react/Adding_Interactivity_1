@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StyledButton, ConterWrapper } from "./styles";
+import { StyledButton, CounterWrapper, ButtonWrapper } from "./styles";
 
 function Counter() {
   const [isSent, setIsSent] = useState(false);
@@ -9,7 +9,7 @@ function Counter() {
   } else {
     const [count, setCount] = useState(0);
     return (
-      <ConterWrapper>
+      <CounterWrapper>
         {count}
         <ButtonWrapper>
           <StyledButton onClick={() => setCount(count + 1)}>
@@ -17,7 +17,7 @@ function Counter() {
           </StyledButton>
           <StyledButton onClick={() => setIsSent(true)}>Send</StyledButton>
         </ButtonWrapper>
-      </ConterWrapper>
+      </CounterWrapper>
     );
   }
 }
