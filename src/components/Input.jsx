@@ -4,7 +4,7 @@ function Input() {
   return (
     <>
       <h3> 입력</h3>
-      <StyledInput />
+      <StyledInput onClick={(e)=>{e.stopPropagation();}}/>
     </>
   );
 }
