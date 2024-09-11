@@ -14,11 +14,13 @@ function Counter() {
         <ButtonWrapper>
           <StyledButton onClick={(e) => {
             e.stopPropagation();
+            e.preventDefault();
             setCount(count + 1);
           }}>
             더하기
           </StyledButton>
           <StyledButton onClick={(e) => {
+            e.stopPropagation();
             e.preventDefault();
             setIsSent(true);
           }}>Send</StyledButton>
