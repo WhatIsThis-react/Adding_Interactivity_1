@@ -1,7 +1,12 @@
 import { StyledButton } from "./styles";
 
 function Button() {
-  return <StyledButton onClick={alert("제출 버튼 클릭")}>제출</StyledButton>;
+  function handleButton(e){
+    e.stopPropagation();
+    alert("제출 버튼 클릭");
+  }
+
+  return <StyledButton onClick={handleButton}>제출</StyledButton>;
 }
 
 export default Button;

@@ -2,7 +2,7 @@ import Button from "./components/Button";
 import Counter from "./components/Counter";
 import Input from "./components/Input";
 import Wrapper from "./components/Wrapper";
-
+// 버그 5개
 function App() {
   return (
     <Wrapper>
